@@ -1,0 +1,42 @@
+name: ohse_mobile
+description: "OHSE Enterprise — Aplikasi manajemen HSSE (Health, Safety, Security & Environment) berbasis mobile."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Networking
+  dio: ^5.7.0
+
+  # Local storage (token)
+  shared_preferences: ^2.3.2
+
+  # Charts on the dashboard
+  fl_chart: ^0.69.0
+
+  # Date formatting (id_ID locale)
+  intl: ^0.19.0
+
+  # Incident photo attachment
+  image_picker: ^1.1.2
+
+  # Save incident photos to the app's internal storage folder
+  path_provider: ^2.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
