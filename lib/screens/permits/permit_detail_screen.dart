@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/labels.dart';
 import '../../core/theme.dart';
+import '../../core/api_client.dart';
 import '../../models/permit.dart';
 import '../../providers/providers.dart';
 import '../../services/ohse_api.dart';

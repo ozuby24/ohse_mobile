@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 
 import '../../core/labels.dart';
 import '../../core/theme.dart';
+import '../../core/api_client.dart';
 import '../../models/named_ref.dart';
 import '../../providers/providers.dart';
 import '../../services/ohse_api.dart';
