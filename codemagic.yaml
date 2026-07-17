@@ -8,6 +8,6 @@ workflows:
       - name: Get Flutter packages
         script: flutter pub get
       - name: Build APK
-        script: flutter build apk --release
+        script: flutter build apk --release --dart-define=API_BASE_URL=http://192.168.0.121:8000/api
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
