@@ -60,11 +60,14 @@ class DashboardStats {
       inspectionsAvgScore: (insp['avg_score'] as num?)?.toDouble() ?? 0,
       observationsTotal: (obs['total'] as num?)?.toInt() ?? 0,
       observationsOpen: (obs['open'] as num?)?.toInt() ?? 0,
-      recentIncidents: ((json['recent_incidents'] as Map?)?['data'] as List? ??
-              json['recent_incidents'] as List? ??
-              [])
-          .map((e) => Incident.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      recentIncidents: (() {
+      final raw = json['recent_incidents'];
+      if (raw is List) return raw;
+      if (raw is Map && raw['data'] is List) return raw['data'] as List;
+      return <dynamic>[];
+    })()
+    .map((e) => Incident.fromJson(e as Map<String, dynamic>))
+    .toList(),
     );
   }
 }
